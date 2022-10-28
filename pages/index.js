@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {motion as m} from 'framer-motion'
 
 export default function Home() {
   return (
@@ -10,7 +11,22 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello cruel world</h1>
+        <div className='my-96 p-1'>
+          <h1 className='text-6xl text-center lg:text-right lg:text-9xl'>Harv Creative</h1>
+        </div>
+        <div className="flex justify-between">
+          <div>
+            <h2>Design</h2>
+            <h2>Company</h2>
+            <h2>2023</h2>
+          </div>
+
+          <div>
+            <h3>Contribute more than you consume.</h3>
+            <h3>Filipino creative designs to satisfy your needs.</h3>
+            <h3>Click me.</h3>
+          </div>
+        </div>
       </main>
     </div>
   )
