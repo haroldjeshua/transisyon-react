@@ -1,8 +1,13 @@
-import { motion as m } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function Contact() {
     return (
-        <main>
+        <motion.main
+            className="text-gray-900 absolute top-0 left-0 w-full h-full bg-blue-700 lg:px-48 px-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.75, ease: 'easeOut' }}
+        >
             <div className="my-96 p-1">
                 <h1 className="text-6xl text-center lg:text-right lg:text-9xl">Keep in Touch</h1>
             </div>
@@ -20,6 +25,6 @@ export default function Contact() {
                     </ul>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
 }

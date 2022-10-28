@@ -3,9 +3,12 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div
-      className="container"
-
+    <motion.div
+      className="bg-purple-300 text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: 'easeOut' }}
+      exit={{ opacity: 0 }}
     >
       <Head>
         <title>Create Next App</title>
@@ -13,9 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className='text-gray-500'>
         <div className="my-96 p-1">
-          <h1 className="text-6xl text-center lg:text-right lg:text-9xl">Harv Creative</h1>
+          <h1 className="text-gray-900 text-6xl text-center lg:text-right lg:text-9xl">Harv Creative</h1>
         </div>
         <div className="flex justify-between">
           <div>
@@ -31,6 +34,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </div>
+    </motion.div>
   )
 }
