@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <motion.div
       className="bg-purple-300 text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ y: "100%" }}
+      animate={{ y: "0%" }}
       transition={{ duration: 0.75, ease: 'easeOut' }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 1 }}
     >
       <Head>
         <title>Create Next App</title>
@@ -18,7 +18,12 @@ export default function Home() {
 
       <main className='text-gray-500'>
         <div className="my-96 p-1">
-          <h1 className="text-gray-900 text-6xl text-center lg:text-right lg:text-9xl">Harv Creative</h1>
+          <motion.h1
+            className="text-gray-900 text-6xl text-center lg:text-right lg:text-9xl"
+            animate={{ x: 0 }}
+            initial={{ x: "-100%" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >Harv Creative</motion.h1>
         </div>
         <div className="flex justify-between">
           <div>
