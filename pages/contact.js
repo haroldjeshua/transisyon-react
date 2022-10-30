@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { container, item } from "../animation"
 
 export default function Contact() {
     return (
@@ -23,12 +24,20 @@ export default function Contact() {
                     <h4>Find me:</h4>
                 </div>
                 <div className="lg:text-6xl text-2xl underline">
-                    <ul>
-                        <li className="pb-2">Twitter</li>
-                        <li className="pb-2">Instagram</li>
-                        <li className="pb-2">Dribbble</li>
-                        <li className="pb-2">LinkedIn</li>
-                    </ul>
+                    <motion.ul variants={container} initial="hidden" animate="show">
+                        <div className="overflow-hidden">
+                            <motion.li variants={item} className="pb-2">Twitter</motion.li>
+                        </div>
+                        <div className="overflow-hidden">
+                            <motion.li variants={item} className="pb-2">Instagram</motion.li>
+                        </div>
+                        <div className="overflow-hidden">
+                            <motion.li variants={item} className="pb-2">Dribbble</motion.li>
+                        </div>
+                        <div className="overflow-hidden">
+                            <motion.li variants={item} className="pb-2">LinkedIn</motion.li>
+                        </div>
+                    </motion.ul>
                 </div>
             </div>
         </motion.main>
